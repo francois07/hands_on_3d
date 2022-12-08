@@ -238,9 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1a205961e91be4d9b8770b51b064d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HeightMap: {fileID: 2800000, guid: ea48d6259fc7e8342af47c4ac3265c9d, type: 3}
-  m_scale: 100
-  m_Resolution: 30
+  m_HeightMap: {fileID: 2800000, guid: 2090b007c57c80c469599a8bebf14494, type: 3}
+  m_Yscale: 3
+  m_Hscale: 100
   m_SplineCtrlPts: []
   m_Width:
     serializedVersion: 2

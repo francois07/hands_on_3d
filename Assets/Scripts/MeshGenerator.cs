@@ -33,7 +33,8 @@ namespace MeshGenerator
             MeshFilter meshFilter = GetComponent<MeshFilter>();
             // m_Spline = new LTSpline(m_SplineCtrlPts.Select((Transform t) => t.position).ToArray());
 
-            meshFilter.mesh = createHeightmapPlane();
+            meshFilter.mesh = createNormalizedPlaneXZMesh(100, 100, (kX, kZ) => computerNormalizedCube(10, 10, kX, kZ));
+
 
             // MeshCollider meshCollider = GetComponent<MeshCollider>();
             // meshCollider.sharedMesh = meshFilter.mesh;
@@ -173,6 +174,50 @@ namespace MeshGenerator
             return pt + ortho * (kX - 0.5f) * .5f * width.Evaluate(kZ);
         }
 
-        // Vector3 computeBuildingType1Position(int height, )
+        Vector3 computeTreePosition(int height, int width, float kX, float kZ)
+        {
+            float coeff = Mathf.PI * 2;
+            Cylindrical cyl = new Cylindrical(width * (1 - kZ) + Random.value, coeff * kX, coeff * kZ);
+
+            return MyMathTools.CoordConvert.CylindricalToCartesian(cyl);
+        }
+
+        Vector3 computerNormalizedCube(int height, int width, float kX, float kZ)
+        {
+            float y;
+            float part = 1.0f / 4.0f;
+            float z = (1 - kZ) * part;
+
+            if (kX <= part)
+            {
+                y = kX;
+                return new Vector3(0, y, z);
+            }
+            else if (part <= kX && kX <= 2 * part)
+            {
+                y = part;
+                return new Vector3(kX - part, y, z);
+            }
+            else if (2 * part <= kX && kX <= 3 * part)
+            {
+                y = 3 * part - kX;
+                return new Vector3(part, y, z);
+            }
+            else
+            {
+                y = 0;
+                return new Vector3(part - (1 - kX), y, z);
+            }
+        }
+
+        Vector3 Test(float kX, float kZ)
+        {
+            float y;
+
+            // y = kX;
+            // return new Vector3(0, y, kZ);
+            y = (1 / 3);
+            return new Vector3(kX, 0.33f, kZ);
+        }
     }
 }
