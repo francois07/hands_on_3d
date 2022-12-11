@@ -1,0 +1,148 @@
+### Christmas City ###
+
+I. Introduction 
+
+    Our school project focuses on using procedural generation techniques to create unique and interesting buildings and 
+structures. The key to our approach is the use of heightmaps, which provide an incredibly powerful way to generate complex 
+3D shapes.
+
+    To create our buildings, we are using a variety of different equations and algorithms to define the shape and contours 
+of the structures. This involves using mathematical concepts such as Perlin noise to create the desired shapes and patterns.
+
+    One of the most amazing things we have been able to do is to create individual cubes that can use a different heightmap 
+on each side. This is made possible by using Unity's built-in function to combine six strip meshes, each of which has a different 
+heightmap applied to it. The result is a set of cubes that can be used to create truly complex and interesting structures.
+
+    Overall, our project is a testament to the amazing power of heightmap generation. By using these techniques, we are able 
+to create complex and interesting buildings that are truly unique and unlike anything else.
+
+II. Instructions 
+
+1. controls :
+
+The user can move an avatar in a 3D universe in third person view with the following commands :
+    - keyboard arrows : move the avatar (forward, backward, left, right)
+    - space : go up
+    - left shift : go down
+    - camera : move the camera with the mouse
+
+2. objectives of the product :
+
+    Our group's objective in our Unity project on procedural generation was to create a Christmas-themed city using algorithms 
+and code. This involved defining a set of rules and parameters for the city's design, and using these to generate a unique city 
+each time the game was played. Our project focused on using heightmaps to generate different buildings within the city, as well 
+as other features such as props. We aimed to create a realistic and detailed environment, and believe we were successful in achieving 
+this through our use of heightmaps and procedural generation.
+
+III. Generated objects
+
+1. Primitive objects
+
+- Quad :
+    For our quad, we created four vertices and two triangles to create the quad shape.
+
+- Strip :
+    For our strip, we generated number of quads by joining their vertices together.
+
+- Sphere :
+    For our sphere, we used a strip on which we wrapped it around two axis, with a radius to determine the size of the sphere.
+
+- Cylinder :
+    For our cylinder, we used a strip on which we wrapped it around an axis, with a radius to determine the size of the cylinder.
+
+- Cone :
+    For our cone, we used the cylinder previously descripted on which we change the radius from bottom to top to create the cone shape.
+
+- Cube :
+    For our cone, we generated six strip meshes with fixed positions then used a function to combine them into one cube.
+
+2. Simple objects
+
+- Buildings :
+    For our buildings, we used two different technics to generate them:
+    - a combination of heightmap and Unity's terrain tools to create the basic buildings.
+    - a combination of a cube with different heightmap applied on each side to create the complex buildings.
+
+- Trees :
+    For our trees, we used a combination of a cone made by ourselves and a Perlin noise function to create the shape of the tree.
+
+- Gifts :
+    For our gifts, we used a cube on which we applied a texture for the wrapping paper.
+
+- Airplane :
+    For our airplane, we used a combination of a cube with different heightmap applied on each side.
+
+- Pannel :
+    For our pannel, we used a combination of a cube with different heightmap applied on each side.
+
+- Snow ball :
+    For our snow, we used a combination of a sphere with a snow's texture applied on it.
+
+- River :
+    For our river, we used a spline, which is a strip curved in order to follow number of points.
+
+3. Strucutres made from several objects
+
+- City :
+    For our city, we used a heightmap to generate a lot of buildings and trees at random places and with random sizes.
+
+- Falling snow :
+    For our falling snow, we made a lot of snow balls that fall from the sky at random places.
+
+IV. Specific remarks
+
+1. Known bugs 
+
+    One of the bugs that we encountered was for the orbital camera around the player. Indeed, the conversion from 
+the mouse position to the camera position was not working properly, and the camera was not moving in the right direction.
+
+2. Limitations
+
+    One of the limitations we faced with this project was the amount of time and resources available to us. 
+As a school project, we only had a limited amount of time to work on the project, and we had to balance our work 
+on this project with other classes and responsibilities. This meant that we were not able to devote as much time 
+and effort to the project as we would have liked, and this limited the scope and complexity of the structures that 
+we were able to create.
+
+    Another limitation was our lack of experience and expertise in the field of procedural generation. While we 
+were able to learn the basics of heightmap generation and how it works in Unity, we were not able to develop our 
+own custom algorithms and techniques to create truly unique and complex structures. This meant that we had to rely 
+on existing algorithms and tools to generate our structures, which limited our ability to create truly original and 
+innovative designs.
+
+    Finally, we also faced limitations in terms of the hardware and software that we had available to us. We were 
+limited to using a basic laptop with a limited amount of RAM and processing power, which made it difficult to create 
+complex and detailed structures. In addition, we were limited to using the basic features and tools provided by Unity, 
+which meant that we were not able to take full advantage of the capabilities of the software.
+
+    Overall, these limitations meant that we were not able to create the most complex and sophisticated structures possible, 
+but we were still able to create a set of interesting and unique buildings that demonstrated the potential of heightmap generation.
+
+3. Improvements
+
+    One of the areas where we could improve our project is by developing more advanced algorithms and techniques for generating 
+structures. This would allow us to create structures that are truly unique and complex, and that are not possible with existing 
+tools and algorithms.
+
+    Another area where we could improve is by using more powerful hardware and software. This would allow us to create more complex 
+and detailed structures, and take full advantage of the capabilities of Unity.
+
+    Finally, we could also improve the project by adding more elements to the structures that we generate. Currently, our structures 
+are relatively simple and consist primarily of cubes with heightmaps applied to them. By adding additional elements such as doors, 
+windows, and other features, we could create more realistic and interesting structures that are more like actual buildings.
+
+    Overall, there are many ways that we could improve our project, and we are excited to continue exploring the possibilities of 
+procedural generation in Unity.
+
+V. Origin of the assets not made by ourselves
+
+For the assets not made by ourselves, we used :
+    - Free images open source from the internet for the textures.
+    - Skybox from the Unity Asset Store (https://assetstore.unity.com/packages/2d/textures-materials/sky/cope-free-skybox-pack-22252).
+    - Snow Materials from the Unity Assest Store (https://assetstore.unity.com/packages/2d/textures-materials/4-snow-materials-high-quality-materials-collection-69201)
+
+VI. Credits 
+    
+The following people contributed to the development of this project:
+- François Soulié
+- Thibault Renou

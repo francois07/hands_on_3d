@@ -5,18 +5,24 @@ using MyMathTools;
 
 public class Animate : MonoBehaviour
 {
-    [SerializeField] float _TranslationSpeed;
-    // Start is called before the first frame update
-    void Start()
+  [SerializeField] float _TranslationSpeed;
+  [SerializeField] float m_radius;
+  Vector3 m_initialPos;
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    m_initialPos = transform.position;
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+    transform.localPosition = (transform.localPosition + Vector3.right * _TranslationSpeed * Time.deltaTime);
+
+    if (transform.localPosition.x > 2000)
     {
-
+      transform.localPosition = new Vector3(0, 0, 0);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Spherical sph = new Spherical(2, Mathf.PI / 2, Mathf.PingPong(Time.time, Mathf.PI));
-
-        transform.position = CoordConvert.SphericalToCartesian(sph);
-    }
+  }
 }
