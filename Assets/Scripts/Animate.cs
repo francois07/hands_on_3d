@@ -18,7 +18,7 @@ public class Animate : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    transform.localPosition = (transform.localPosition + Vector3.right * _TranslationSpeed * Time.deltaTime);
+    transform.localPosition = (transform.localPosition - Vector3.right * _TranslationSpeed * Time.deltaTime);
 
     if (transform.localPosition.x > 2000)
     {
